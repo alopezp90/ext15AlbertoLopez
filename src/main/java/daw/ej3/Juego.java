@@ -26,7 +26,7 @@ public class Juego {
         try {
             fecha = LocalDate.of(pideAno(), pideMes(), pideDia());
         } catch (DateTimeException dte) {
-            fecha = null;
+            fecha = LocalDate.now(); //El constructor corregira el problema
             System.out.println("La fecha introducida no tiene el formato correcto(null)");
         }
         eleccion = elige();
