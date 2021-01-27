@@ -16,14 +16,14 @@ public class Jugador {
     private boolean eleccion; //true pares, false nones;
 
     private static int contadorInstancias = 0;
-    private static final LocalDate DEFECTO = LocalDate.of(2000, 1, 1);
+    private static final LocalDate FECHA_DEFECTO = LocalDate.of(2000, 1, 1);
 
     //constructor por defecto
     public Jugador() {
         contadorInstancias++;
         this.nombre = "Juan Carlos";
         this.apellido = "Vico";
-        this.fechaNacimiento = DEFECTO;
+        this.fechaNacimiento = FECHA_DEFECTO;
         //eleccion se inializa false por defecto (nones)
     }
 
@@ -33,7 +33,7 @@ public class Jugador {
         if (esMenor(fecha)) {
             this.nombre = "Juan Carlos";
             this.apellido = "Vico";
-            this.fechaNacimiento = DEFECTO;
+            this.fechaNacimiento = FECHA_DEFECTO;
             //eleccion se inializa false por defecto (nones)
         } else {
             this.nombre = nombre;

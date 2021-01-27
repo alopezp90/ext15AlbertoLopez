@@ -23,7 +23,7 @@ public class Utilidades {
 
     public static int leerEnteroRango(int min, int max) {
         boolean valido = false;
-        int enteroRango = -2147483648;
+        int enteroRango = Integer.MIN_VALUE;
         while (!valido) {
             try {
                 enteroRango = sc.nextInt();
@@ -31,6 +31,7 @@ public class Utilidades {
                     valido = true;
                 }
             } catch (InputMismatchException ime) {
+                sc.nextLine();
             }
         }
         return enteroRango;
